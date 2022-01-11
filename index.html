@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>HTML Template til React</title>
+  </head>
+  <body>
+
+    <div id="root"></div>
+
+
+    <!-- babel kompencerer for hvis browseren ikke kan afvikle es6 js-->
+    <script type="text/babel">
+      // Her skal du indsætte din react kode
+        
+        //nr 1
+      const Example = () => {
+            return (
+                <h1>XML er det nye sort</h1>
+            )
+        }
+        
+        // nr 2
+        const Example2 = () => {
+            return (
+                <h2>React er {10*10} gange bedre med JSX</h2>
+            )
+        }
+
+        // nr 3
+        const Example3 = () => {
+            return(
+                <ul>
+                    <h3>Mine livretter er:</h3>
+                    <li>Kage</li>
+                    <li>Pizza</li>
+                    <li>Lasagne</li>
+                    <li>Gratis mad</li>
+                    <li>Mere Kage</li>
+                </ul>
+            )
+        }
+        
+        //nr 4
+        const Example4 = () => {
+            return(
+                <div>
+                    <p>Shrek is love, dolor sit amet consectetur adipisicing elit. Facere officia saepe culpa fugit suscipit cum eaque! Harum, debitis officiis minima rerum at impedit? Quisquam eius ipsa officiis perspiciatis quo sit.</p>
+                    <p>Pizza is life, dolor sit amet consectetur adipisicing elit. Facere officia saepe culpa fugit suscipit cum eaque! Harum, debitis officiis minima rerum at impedit? Quisquam eius ipsa officiis perspiciatis quo sit.</p>
+                </div>
+            )
+        }
+
+        //nr 5
+        const Example5 = () => {
+            return (
+                <>
+                <p>Shrek is love, dolor sit amet consectetur adipisicing elit. Facere officia saepe culpa fugit suscipit cum eaque! Harum, debitis officiis minima rerum at impedit? Quisquam eius ipsa officiis perspiciatis quo sit.</p>
+                <p>Pizza is life, dolor sit amet consectetur adipisicing elit. Facere officia saepe culpa fugit suscipit cum eaque! Harum, debitis officiis minima rerum at impedit? Quisquam eius ipsa officiis perspiciatis quo sit.</p>
+                </>
+            
+            )   
+        }
+        //nr 6
+        const Example6 = () => {
+            return(
+                <input type="text" placeholder="hej" />
+            )
+        }
+        
+        //nr7
+        const Example7 = () => {
+            return(
+                <section className="mainwrapper">
+                    <h3>denne ligger inde i en section med classen mainwrapper</h3></section>
+            )
+        }
+
+        //nr 8 
+        const Example8 = () => {
+            const hour =  new Date().getHours()
+            let text = "God morgen";
+            if (hour > 12) {   
+                text = "God dag";    
+            }
+            return(
+                <div>{text}</div>
+            )
+        }
+
+        //nr 9
+        const Example9 = () => {
+            const hour =  new Date().getHours()
+            return (<h1>{(hour) > 12 ? "God dag" : "God morgen"}</h1>)
+        }
+
+        //nr 10
+        //react fragment = <> </>
+        const App = () => {
+            return (
+                <>
+                <Example /> 
+                <Example2 /> 
+                <Example3 /> 
+                <Example4 /> 
+                <Example5 /> 
+                <Example6 /> 
+                <Example7 /> 
+                <Example8 /> 
+                <Example9 /> 
+                </>
+            )
+        }
+        ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+        )
+    </script>
+
+  </body>
+</html>
